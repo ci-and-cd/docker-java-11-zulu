@@ -1,5 +1,3 @@
-
-#FROM alpine:3.9
 FROM cirepo/nix:2.2.1-alpine-3.9
 
 
@@ -20,9 +18,6 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 ENV JAVA_HOME /usr/lib/jvm/zulu-11
 ENV PATH=${JAVA_HOME}/bin:${PATH}
-
-
-#COPY --from=cirepo/glibc:2.29-r0-alpine-3.9-archive /data/root /
 
 
 COPY --chown=root:root docker /data
